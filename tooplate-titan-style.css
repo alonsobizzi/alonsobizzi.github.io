@@ -315,6 +315,14 @@ section {
     z-index: 1;
 }
 
+.hero-bg-animation,
+.floating-shape,
+.geo-shape,
+.particles {
+    pointer-events: none;
+}
+
+
 .floating-shape {
     position: absolute;
     border-radius: 50%;
@@ -1249,6 +1257,7 @@ section {
         transform: translateY(0) !important;
     }
 }
+
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -1359,6 +1368,43 @@ section {
     font-size: 0.8rem;
     color: var(--accent-blue);
 }
+
+/* Ari addition for filtering portfolio */
+.portfolio-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+
+    position: relative;
+    z-index: 5;
+}
+
+
+/* Portfolio filters – mirror timeline filters */
+.portfolio-filter {
+    padding: 0.8rem 1.5rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 25px;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.portfolio-filter:hover,
+.portfolio-filter.active {
+    background: rgba(118, 169, 250, 0.2);
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+    transform: translateY(-2px);
+}
+
+
 
 /* Contact section */
 .contact-content {

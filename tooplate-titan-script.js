@@ -1,3 +1,4 @@
+
 /* JavaScript Document
 
 Tooplate 2147 Titan Folio
@@ -186,5 +187,47 @@ function initTimeline() {
     updateTimelineItems();
 }
 
+function initPortfolioFilter() {
+    const cards = document.querySelectorAll('.portfolio-card');
+    const filters = document.querySelectorAll('.portfolio-filter');
+
+    filters.forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = button.dataset.filter;
+
+            // active state
+            filters.forEach(b => b.classList.remove('active'));
+            button.classList.add('active');
+
+            cards.forEach(card => {
+                const tags = card.dataset.tags
+                    .toLowerCase()
+                    .split(/\s+/);
+
+                const match =
+                    filter === 'all' || tags.includes(filter);
+
+                if (match) {
+                    card.style.display = 'block';
+                    requestAnimationFrame(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    });
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(30px)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
+    });
+}
+
+
+
+// Initialize portfolio filter when DOM is ready
+document.addEventListener('DOMContentLoaded', initPortfolioFilter);
 // Initialize timeline when DOM is ready
 document.addEventListener('DOMContentLoaded', initTimeline);
