@@ -315,12 +315,7 @@ section {
     z-index: 1;
 }
 
-.hero-bg-animation,
-.floating-shape,
-.geo-shape,
-.particles {
-    pointer-events: none;
-}
+
 
 
 .floating-shape {
@@ -1337,7 +1332,28 @@ section {
 .portfolio-image.music {
     background-image: url('images/portfolio-music.jpg');
 }
+.portfolio-image.fpga {
+    background-image: url('images/FPGA.jpg');
+}
+.portfolio-image.chipese573 {
+    background-image: url('images/neurostim-chip-pcb.png');
+}
 
+.portfolio-image.blackrock1 {
+    background-image: url('images/embeddedsysts.jpg');
+}
+
+.portfolio-image.blackrock2 {
+    background-image: url('images/brainjelly.jpg');
+}
+
+.portfolio-image.blackrock3 {
+    background-image: url('images/sheephones.jpg');
+}
+
+.portfolio-image.waiting {
+    background-image: url('images/waiting.jpg');
+}
 .portfolio-content {
     padding: 2rem;
 }
