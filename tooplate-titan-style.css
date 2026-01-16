@@ -1338,7 +1338,28 @@ section {
 .portfolio-image.chipese573 {
     background-image: url('images/neurostim-chip-pcb.png');
 }
+.portfolio-image.sysmex {
+    background-image: url('images/sysmex.png');
+}
+.portfolio-image.nmf {
+    background-image: url('images/nmf_frame.png');
+}
+.portfolio-image.eth {
+    background-image: url('images/zurich_poster.png');
+}
+.portfolio-image.cambs {
+    background-image: url('images/cambridge_poster.jpg');
+}
+.portfolio-image.brainGPT {
+    background-image: url('images/bci_seal.jpg');
+}
+.portfolio-image.wavesound {
+    background-image: url('images/wavesound.webp');
+}
 
+.portfolio-image.pic18 {
+    background-image: url('images/pic18.png');
+}
 .portfolio-image.blackrock1 {
     background-image: url('images/embeddedsysts.jpg');
 }
